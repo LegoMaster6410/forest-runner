@@ -2,9 +2,8 @@
 /* eslint-disable no-undef */
 var backgroundImg;
 //var iconImg;
-//var player;
-
-function preload() {
+//var player
+function preload
   backgroundImg = loadImage("assets/images/background/Background.png");
   //iconImg = loadImage("assets/images/loadingIcon/Loading.png");
 }
@@ -15,7 +14,8 @@ function playButtonClicked() {
    playButton.remove();
    soundButton.remove();
    scoreButton.remove();
-   player.createSprite();
+   player = createSprite(windowWidth / 6, windowHeight / 1.5);
+   
     
     
     // test
