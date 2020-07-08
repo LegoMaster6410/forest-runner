@@ -16,6 +16,9 @@ function playButtonClicked() {
    soundButton.remove();
    scoreButton.remove();
    player.createSprite();
+    
+    
+    // test
 }
 
 function setup() {
