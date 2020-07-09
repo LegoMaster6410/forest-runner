@@ -3,18 +3,18 @@
 var backgroundImg;
 //var iconImg;
 //var player
-function preload
-  backgroundImg = loadImage("assets/images/background/Background.png");
+function preload() {
+    backgroundImg = loadImage("assets/images/background/Background.png");
   //iconImg = loadImage("assets/images/loadingIcon/Loading.png");
 }
 
 function playButtonClicked() {
     
   // this is an example of how to change the background
-   playButton.remove();
-   soundButton.remove();
-   scoreButton.remove();
-   player = createSprite(windowWidth / 6, windowHeight / 1.5);
+  playButton.remove();
+  soundButton.remove();
+  scoreButton.remove();
+  player = createSprite(windowWidth / 6, windowHeight / 1.5);
    
     
     
@@ -34,11 +34,11 @@ function setup() {
   soundButton = createButton("Sound on/off");
   soundButton.position(windowWidth / 5.2, windowHeight / 2);
 
-  loading = createSprite(windowWidth / 2, windowHeight / 2);
-  loading.addImage(iconImg);
+  //loading = createSprite(windowWidth / 2, windowHeight / 2);
+  //loading.addImage(iconImg);
 
-  loading.addImage = (windowWidth / 5, windowHeight / 5);
-  loading.scale = 1 / 4;
+  //loading.addImage = (windowWidth / 5, windowHeight / 5);
+  //loading.scale = 1 / 4;
 
   player = createSprite(windowWidth / 6, windowHeight / 1.5);
   player.scale = 1 / 4;
@@ -56,10 +56,10 @@ function setup() {
   );
 
   player.addAnimation(
-  "jump",
+        "jump",
   "assets/images/player/jump/autumn_Jump_000.png",
   "assets/images/player/jump/autumn_Jump_009.png"
-  );
+    );
 
   player.addAnimation(
   "run",
