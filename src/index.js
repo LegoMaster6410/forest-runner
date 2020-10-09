@@ -8,7 +8,7 @@ var isSoundOn = true;
 var score = 0;
 var isPlaying = false;
 var isGameOver = false;
-var speed = 3;
+var speed = 2;
 
 function preload() {
   song = loadSound('assets/sounds/main_song.mp3');
@@ -185,25 +185,25 @@ function setup() {
   player.changeAnimation('run');
   player.visible = false;
   player.setCollider('rectangle', -29, 50, 150, 500);
-  player.debug = true;
+  //player.debug = true;
 
   rock = createSprite(windowWidth + 1000, windowHeight - 70);
   rock.addImage(rockImg);
   rock.scale = 5 / 12;
   rock.visible = false;
-  rock.debug = true;
+  //rock.debug = true;
 
   log = createSprite(windowWidth + 2000, windowHeight - 70);
   log.addImage(logImg);
   log.scale = 5 / 12;
   log.visible = false;
-  log.debug = true;
+  //log.debug = true;
 
   ivy = createSprite(windowWidth + 3000, windowHeight - 70);
   ivy.addImage(ivyImg);
   ivy.scale = 5 / 12;
   ivy.visible = false;
-  ivy.debug = true;
+  //ivy.debug = true;
 
   obstacleGroup = new Group();
   obstacleGroup.add(rock);
@@ -305,7 +305,7 @@ function updatePlayer() {
 
   if (player.getAnimationLabel() === 'jump') {
     if (player.animation.getFrame() === player.animation.getLastFrame()) {
-      player.velocity.y = 20;
+      player.velocity.y = 15;
 
       if (player.position.y >= windowHeight - 225) {
         player.changeAnimation('run');
