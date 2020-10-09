@@ -118,7 +118,7 @@ function setup() {
   background2Sprite.addImage(background2Img);
 
   playButton = createButton("Play");
-  playButton.position(windowWidth / 1.2, windowHeight / 2);
+  playButton.position(windowWidth / 2, windowHeight / 2  + 60);
   playButton.addClass("playButton");
   playButton.mousePressed(playButtonClicked);
 
@@ -137,7 +137,8 @@ function setup() {
   titleText.style("width", "100%");
   titleText.style("font-size", "60px");
   titleText.style("font-family", "DpComic");
-  titleText.position(0, windowHeight / 2);
+  titleText.style("transform", "translateX(-50%)");
+  titleText.position(windowWidth / 2, windowHeight / 2);
   titleText.style("color", "white");
 
   //loading = createSprite(windowWidth / 2, windowHeight / 2);
@@ -234,8 +235,16 @@ function gameOver() {
   log.setSpeed(0);
   ivy.setSpeed(0);
   playAgainButton = createButton("Play Again");
-  playAgainButton.position(windowWidth / 2, windowHeight / 2);
+  playAgainButton.position(windowWidth / 2.2, windowHeight / 1.7);
   playAgainButton.mousePressed(playAgainButtonClicked);
+    
+  gameOverText = createDiv("Game Over");
+  gameOverText.style("text-align", "center");
+  gameOverText.style("width", "100%");
+  gameOverText.style("font-size", "60px");
+  gameOverText.position(0, windowHeight / 2);
+  gameOverText.style("font-family", "DpComic");
+  gameOverText.style("color", "white");
 
   //if (window.confirm("Game Over. Play again.")) {
   //window.location.reload();
@@ -248,6 +257,7 @@ function collisions() {
 
 function playAgainButtonClicked() {
   window.location.reload();
+    gameOverText.remove();
 }
 
 function keyPressed() {
