@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "DpComic";
-  src: url("assets/fonts/dpcomic.ttf");
+  font-family: 'DpComic';
+  src: url('assets/fonts/dpcomic.ttf');
 }
 
 @font-face {
-  font-family: "DpComic";
-  src: url("assets/fonts/dpcomic.ttf");
+  font-family: 'DpComic';
+  src: url('assets/fonts/dpcomic.ttf');
 }
 body,
 canvas {
@@ -14,12 +14,15 @@ canvas {
   overflow: hidden;
 }
 
-.playButton, button {
-  width: 100px;
-  height: 40px;
+.playButton,
+button {
+  font-family: 'DpComic';
+  font-size: 40px;
+  width: 216px;
+  height: 100px;
   color: white;
   background-color: transparent;
-  background-image: url("assets/images/buttons/button.png");
+  background-image: url('assets/images/buttons/button.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -35,7 +38,7 @@ canvas {
   height: 50px;
   color: white;
   background-color: transparent;
-  background-image: url("assets/images/buttons/volume-2.svg");
+  background-image: url('assets/images/buttons/volume-2.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
