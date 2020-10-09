@@ -1,10 +1,8 @@
-
 (function () {
   function createTiledSprite() {
     const sprite1 = createSprite(0, 0, windowWidth, windowHeight);
     const sprite2 = createSprite(0, 0, windowWidth, windowHeight);
     let image;
-
 
     function isLeftOfScreen(sprite) {
       const boundingBox = sprite.getBoundingBox();
@@ -17,6 +15,7 @@
 
     function addImage(newImage) {
       image = newImage;
+      image.resize(0, windowHeight);
 
       sprite1.addImage(newImage);
       sprite1.position.x = newImage.width / 2; // 0%
@@ -48,13 +47,11 @@
       drawSprite1();
     };
 
-
     return {
       addImage,
-      setSpeed
+      setSpeed,
     };
   }
 
-
   window.createTiledSprite = createTiledSprite;
-}())
+})();
